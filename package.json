@@ -20,7 +20,7 @@
   "lint-staged": {
     "app/**/*.{js,vue}": [
       "prettier --tab-width 2 --write",
-      "eslint --fix",
+      "eslint",
       "git add"
     ]
   },
