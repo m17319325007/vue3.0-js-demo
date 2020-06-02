@@ -31,7 +31,6 @@ export default {
     //   update();
     // }, 1000);
     return {
-      user: user,
       update
     };
   },
