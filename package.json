@@ -21,7 +21,8 @@
     "src/**/*.{js,vue}": [
       "prettier --tab-width 2 --write",
       "eslint",
-      "git add"
+      "git add",
+      "git commit"
     ]
   },
   "dependencies": {

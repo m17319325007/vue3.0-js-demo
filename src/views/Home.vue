@@ -31,8 +31,7 @@ export default {
     //   update();
     // }, 1000);
     return {
-        obj,
-      user: user,
+       user: user,
       update
     };
   },
