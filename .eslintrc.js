@@ -12,7 +12,7 @@ module.exports = {
   },
   rules: {
     "indent": [
-      "warn",
+      "error",
       2
     ],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
