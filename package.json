@@ -18,7 +18,7 @@
     }
   },
   "lint-staged": {
-    "app/**/*.{js,vue}": [
+    "src/**/*.{js,vue}": [
       "prettier --tab-width 2 --write",
       "eslint",
       "git add"
