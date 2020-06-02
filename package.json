@@ -23,7 +23,8 @@
       "eslint",
       "git add",
       "git commit"
-    ]
+    ],
+    "**/*.scss": "stylelint --syntax scss"
   },
   "dependencies": {
     "core-js": "^3.6.5",

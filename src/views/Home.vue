@@ -32,11 +32,12 @@ export default {
     // }, 1000);
     return {
       obj,
+      user: user,
       update
     };
   },
   beforeMount() {
-    console.log("dom挂在前");
+    console.log("dom挂在前";
   },
   mounted() {
     console.log("dom挂在后");
