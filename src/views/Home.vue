@@ -37,10 +37,10 @@ export default {
     };
   },
   beforeMount() {
-    console.log("dom挂在前";
+    console.log("dom挂在前");
   },
   mounted() {
-    console.log("dom挂在后");
+    console.log("dom挂在后";
   }
 };
 </script>

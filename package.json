@@ -18,13 +18,13 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,vue}": [
+    "./src/**/*.{js,vue}": [
       "prettier --tab-width 2 --write",
       "eslint",
       "git add",
       "git commit"
     ],
-    "**/*.scss": "stylelint --syntax scss"
+    "./src/**/*.scss": "stylelint --syntax scss"
   },
   "dependencies": {
     "core-js": "^3.6.5",
