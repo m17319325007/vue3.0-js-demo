@@ -6,14 +6,27 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "./node_modules/.bin/eslint --fix",
+        "git add"
+      ],
+      "src/**/*.vue": [
+        "./node_modules/.bin/eslint --fix",
+        "git add"
+      ]
+    }
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
-    "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
+    "vue": "^3.0.0-beta.1",
+    "vue-router": "^4.0.0-alpha.6",
+    "vuex": "^4.0.0-alpha.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
@@ -23,11 +36,14 @@
     "@vue/cli-plugin-router": "~4.4.0",
     "@vue/cli-plugin-vuex": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
+    "@vue/compiler-sfc": "^3.0.0-beta.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^7.0.0-alpha.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.7",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-cli-plugin-vue-next": "~0.1.3"
   }
 }
