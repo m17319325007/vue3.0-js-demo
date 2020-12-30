@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div>{{ obj.name }}</div>
-    <div>{{user}}</div>
+    <div>{{ user }}</div>
     <button @click="update">点击一下</button>
   </div>
 </template>
@@ -10,6 +10,7 @@
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
 import { reactive, ref } from "vue";
+import { useRouter } from "vue-router";
 
 export default {
   name: "Home",
@@ -18,13 +19,15 @@ export default {
   // },
   setup() {
     console.log("初始化前");
+    const router = useRouter();
     const obj = reactive({
-      name: "frist vue demo"
+      name: "frist vue demo",
     });
     const user = ref(1);
 
     const update = () => {
       user.value = user.value + 1;
+      router.push("/about");
     };
 
     // setInterval(() => {
@@ -33,14 +36,14 @@ export default {
     return {
       obj,
       user: user,
-      update
+      update,
     };
   },
   beforeMount() {
     console.log("dom挂在前");
   },
   mounted() {
-    console.log("dom挂在后";
-  }
+    console.log("dom挂在后");
+  },
 };
 </script>
