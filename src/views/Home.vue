@@ -2,6 +2,7 @@
   <div class="home">
     <div>{{ obj.name }}</div>
     <div>{{ user }}</div>
+    <input v-focus="user" type="text" value="" />
     <button @click="update">点击一下</button>
   </div>
 </template>
@@ -10,7 +11,7 @@
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
 import { reactive, ref } from "vue";
-import { useRouter } from "vue-router";
+// import { useRouter } from 'vue-router';
 
 export default {
   name: "Home",
@@ -19,7 +20,7 @@ export default {
   // },
   setup() {
     console.log("初始化前");
-    const router = useRouter();
+    // const router = useRouter();
     const obj = reactive({
       name: "frist vue demo",
     });
@@ -27,7 +28,7 @@ export default {
 
     const update = () => {
       user.value = user.value + 1;
-      router.push("/about");
+      // router.push('/about');
     };
 
     // setInterval(() => {
